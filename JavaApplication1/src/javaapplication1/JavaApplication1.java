@@ -7,7 +7,8 @@ package javaapplication1;
 
 /**
  *
- * @author krishajar
+ * @author krishajar dan firly
+ * // test12345
  */
 public class JavaApplication1 {
 
