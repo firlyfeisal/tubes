@@ -6,12 +6,12 @@
 package javaapplication1;
 
 /**
- *tes 123456
+ *tes 123456wkwkwkkw
  * @author krishajar
  */
 public class JavaApplication1 {
 
-    /** tes 1234567
+    /** tes 1234567wkwkwk
      * @param args the command line arguments
      */
     public static void main(String[] args) {
