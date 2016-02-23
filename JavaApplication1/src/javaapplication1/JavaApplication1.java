@@ -7,12 +7,12 @@ package javaapplication1;
 
 /**
  *
- * @author krishajar dan firly
+ * @author krishajar dan firly test123123123
  * // test12345
  */
 public class JavaApplication1 {
 
-    /**
+    /** tes 1234567wkwkwk
      * @param args the command line arguments
      */
     public static void main(String[] args) {
