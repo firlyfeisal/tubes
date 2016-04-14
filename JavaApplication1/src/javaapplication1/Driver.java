@@ -20,8 +20,8 @@ public class Driver {
         System.out.println("3. Hapus Penyedia             4. Tambah Barang");
         System.out.println("5. Lihat Barang               6. Tambah Petugas");
         System.out.println("7. Lihat Petugas              8. Hapus Petugas");
-        System.out.println("9. Buat Gudang                10. Lihat Gudang");
-        System.out.println("11. Tambah Barang ke Gudang    12. Lihat Barang di Gudang");
+        System.out.println("9. Tambah Gudang              10. Lihat Gudang");
+        System.out.println("11. Tambah Barang ke Gudang   12. Lihat Barang di Gudang");
         System.out.println("0. Keluar");
         System.out.print("Silakan Input Pilihan : ");
         pilihan = input.nextInt();
