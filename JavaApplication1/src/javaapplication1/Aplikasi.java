@@ -150,14 +150,12 @@ public class Aplikasi {
                                 break;
                         case 9 :
                                 System.out.println("-------------------");
-				System.out.println("Tambah Gudang");
-                                System.out.print("Input Indeks Petugas : ");
-                                int x9 = input.nextInt();                               
+				System.out.println("Tambah Gudang");                              
 				System.out.print("Input ID Gudang : ");
                                 int y9 = input.nextInt();
                                 System.out.print("Input Nama Gudang : ");
                                 String z9 = input.next();
-                                getPetugas(x9).createGudang(new Gudang(y9,z9));
+                                addGudang(new Gudang(y9,z9));
                                 System.out.println("Berhasil");
                                 break;                                
                         case 10 :

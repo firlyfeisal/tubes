@@ -23,21 +23,8 @@ public class Petugas{
     public void setId(int id){
     	this.id = id;
     }
-    public void createGudang(Gudang i){
-        gud.add(i);
-    }
     public Gudang getGudang(int i){
         Object[] array = gud.toArray();
         return (Gudang) array[i];
-    }
-    public void showAllGudang(){
-	System.out.println("===Daftar Gudang===");
-        for (Gudang obj : gud)
-        {
-            
-            System.out.println("Name : "+obj.getNama());
-            System.out.println("ID : "+obj.getId());
-            System.out.println("====================================");
-        }
     }
 }
