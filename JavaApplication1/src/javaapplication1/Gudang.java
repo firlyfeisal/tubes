@@ -1,32 +1,48 @@
 package javaapplication1;
+import java.util.*;
 
 public class Gudang {
-	private Barang[] g = new Barang[50];
-	private int nBarang = 0;
+    private String nama;
+    private int id;
+    public Gudang(int id, String nama){
+        this.id = id;
+        this.nama = nama;
+    }
+    private List<Barang> g = new ArrayList<>();
 	
-	public void addBarang(int id, String nama, int jml_barang){
-		g[nBarang] = new Barang(id, nama, jml_barang);
-		nBarang++;			
-	}
+    public void addBarang(Barang i){
+	g.add(i);   
+    }
 	
-	public Barang getBarang(int i){
-		return g[i];
-	}
+    public Barang getBarangGudang(int i)
+    {
+        Object[] array = g.toArray();
+        return (Barang) array[i];
+    } 
 	
-	public void showBarang(){
-		for(int i = 0; i < g.length; i++){
-            System.out.println("id barang: "+getBarang(i).getId());
-			System.out.println("nama barang: "+getBarang(i).getNama());
-			System.out.println("jumlah barang: "+getBarang(i).getJml_barang());
-        } 
-	}	
-	
-	public void removeBarang (int del){
-		for(int i = 0; i < g.length; i++){
-			if(del == i){
-			g[i]= null;
-			}
-		}
-	}
-	
+    public void showAllBarangGudang(){
+	System.out.println("===Daftar Barang di Gudang===");
+        for (Barang obj : g)
+        {           
+            System.out.println("ID : "+obj.getId());
+            System.out.println("Name : "+obj.getNama());
+            System.out.println("Jumlah : "+obj.getJml_barang());
+            System.out.println("====================================");
+        }
+    }	
+    public void removeBarang (int i){
+        g.remove(i);
+    }
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+    public String getNama(){
+        return nama;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+    public int getId(){
+        return id;
+    }
 }

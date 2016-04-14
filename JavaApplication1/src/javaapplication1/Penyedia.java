@@ -5,8 +5,7 @@ import java.util.*;
 public class Penyedia{
     private String nama;
     private int id;
-    private Barang[] b = new Barang[50];
-    private int nBarang = 0;
+    private List<Barang> b = new ArrayList<Barang>();
 
     public Penyedia(int id, String nama){
 	this.id=id;
@@ -25,30 +24,31 @@ public class Penyedia{
     public void setId(int id){
 	this.id = id;
     }
-    public void createBarang(int id, String nama, int jml_barang){
-	b[nBarang] = new Barang(id, nama, jml_barang);
-        
-	nBarang++;
+    public void createBarang(Barang i){
+	//b[nBarang] = new Barang(id, nama, jml_barang);
+        b.add(i);
+	//nBarang++;
     }
-    public Barang getBarang(int i){
-	return b[i];
+    public Barang getBarang(int i)
+    {
+        Object[] array = b.toArray();
+        //if (b.get(i).getId() == i){
+        //return (Barang) array[i];
+        //}
+        return (Barang) array[i];
+    }    
+    public void showAllBarang(){
+	System.out.println("===Daftar Barang===");
+        for (Barang obj : b)
+        {
+            System.out.println("ID : "+obj.getId());
+            System.out.println("Name : "+obj.getNama());
+            System.out.println("Jumlah : "+obj.getJml_barang());
+            System.out.println("====================================");
+        }
     }
-    public int getnBarang(){
-	return nBarang;
-    }
-    public void showBarang(){
-	for(int i = 0; i < b.length; i++){
-            System.out.println("id barang: "+getBarang(i).getId());
-            System.out.println("nama barang: "+getBarang(i).getNama());
-            System.out.println("jumlah barang: "+getBarang(i).getJml_barang());
-        } 
-    }
-    public void removeBarang (int del){
-        for(int i = 0; i < b.length; i++){
-            if(del == i){
-		b[i]= null;
-            }
-	}
+    public void removeBarang (int i){
+        b.remove(i);
     }
 	
 }
